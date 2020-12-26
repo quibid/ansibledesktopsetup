@@ -4,8 +4,25 @@
   become: true
 
   tasks:
-    - name: install some linux packages
+    - name: Install some linux packages
       package:
         name:
           - htop
           - tmux
+
+    - name: Copy wallpaper files
+      copy:
+        src: files/png/mountains.png
+        dest: /usr/share/backgrounds/ansible-mountains.png
+        owner: root
+        group: root
+
+    - name: Set the wallpaper
+      dconf:
+        key: '/org/gnome/desktop/background/picture-uri'
+        value: "'file:///usr/share/backgrounds/ansible-mountains.png'"
+
+    - name: Set wallpaper position
+      dconf:
+        key: '/org/gnome/desktop/backound/picture-uri'
+        value: "'zoom'"
