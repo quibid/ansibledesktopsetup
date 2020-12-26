@@ -1,2 +1,3 @@
 # ansible_desktop
-Configuration manager for workstation
+
+Configuration manager for a workstation
