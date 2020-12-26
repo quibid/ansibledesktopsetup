@@ -42,3 +42,10 @@
       dest: ~/.profile
       owner: $USERNAME
       group: $USERNAME
+
+    - name: Copy bin scripts
+    copy:
+      src: files/bin
+      dest: ~/bin
+      owner: $USERNAME
+      group: $USERNAME
