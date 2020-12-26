@@ -28,3 +28,17 @@
       dconf:
         key: '/org/gnome/desktop/backound/picture-uri'
         value: "'zoom'"
+
+    - name: Copy .bashrc file
+    copy:
+      src: files/bashrc
+      dest: ~/.bashrc
+      owner: $USERNAME
+      group: $USERNAME
+
+    - name: Copy .profile file
+    copy:
+      src: files/profile
+      dest: ~/.profile
+      owner: $USERNAME
+      group: $USERNAME
