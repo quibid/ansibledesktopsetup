@@ -18,11 +18,13 @@
         group: root
 
     - name: Set the wallpaper
+      become_user: quabid
       dconf:
         key: '/org/gnome/desktop/background/picture-uri'
         value: "'file:///usr/share/backgrounds/ansible-mountains.png'"
 
     - name: Set wallpaper position
+      become_user: quabid
       dconf:
         key: '/org/gnome/desktop/backound/picture-uri'
         value: "'zoom'"
