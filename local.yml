@@ -45,7 +45,8 @@
 
     - name: Copy bin scripts
     copy:
-      src: files/bin
+      src: files/bin/{{ item }}
       dest: ~/bin
       owner: $USERNAME
       group: $USERNAME
+      mode: u+rwx, g-rwx, o-rwx
