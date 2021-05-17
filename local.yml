@@ -38,7 +38,7 @@
 
     - name: Copy .bash_aliases file
     copy:
-      src: files/profile
+      src: files/.bash_aliases
       dest: ~/.bash_aliases
       owner: $USERNAME
       group: $USERNAME
