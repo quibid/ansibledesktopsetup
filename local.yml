@@ -15,11 +15,13 @@
           - espeak
           - locate
           - openssh-server
+          - gcc
           - git
           - gnome-nettool
           - gnome-tweaks
           - planetblupi
           - prips
+          - shc
           - tilix
           - xscreensaver
           - xscreensaver-gl
