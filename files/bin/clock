@@ -1,3 +1,0 @@
-#!/bin/bash
-color -o $(date +'%X')
-exit 0
