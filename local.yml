@@ -46,13 +46,6 @@
         key: "/org/gnome/desktop/backound/picture-uri"
         value: "'zoom'"
 
-    - name: Copy .bashrc file
-      copy:
-        src: files/bashrc
-        dest: ~/.bashrc
-        owner: $USERNAME
-        group: $USERNAME
-
     - name: Copy .bash_aliases file
       copy:
         src: files/.bash_aliases
