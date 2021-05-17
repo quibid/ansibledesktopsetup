@@ -36,10 +36,10 @@
       owner: $USERNAME
       group: $USERNAME
 
-    - name: Copy .profile file
+    - name: Copy .bash_aliases file
     copy:
       src: files/profile
-      dest: ~/.profile
+      dest: ~/.bash_aliases
       owner: $USERNAME
       group: $USERNAME
 
@@ -49,4 +49,4 @@
       dest: ~/bin
       owner: $USERNAME
       group: $USERNAME
-      mode: u+rwx, g-rwx, o-rwx
+      mode: u+rwx, g-rwx, o-rx
