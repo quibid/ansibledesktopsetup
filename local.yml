@@ -9,6 +9,24 @@
         name:
           - htop
           - tmux
+          - alien
+          - curl
+          - dmitry
+          - espeak
+          - locate
+          - openssh-server
+          - git
+          - gnome-nettool
+          - gnome-tweaks
+          - htop
+          - planetblupi
+          - prips
+          - tilix
+          - xscreensaver
+          - xscreensaver-gl
+          - xscreensaver-gl-extra
+          - wget
+          - whois
 
     - name: Copy wallpaper files
       copy:
@@ -20,33 +38,33 @@
     - name: Set the wallpaper
       become_user: quabid
       dconf:
-        key: '/org/gnome/desktop/background/picture-uri'
+        key: "/org/gnome/desktop/background/picture-uri"
         value: "'file:///usr/share/backgrounds/ansible-mountains.png'"
 
     - name: Set wallpaper position
       become_user: quabid
       dconf:
-        key: '/org/gnome/desktop/backound/picture-uri'
+        key: "/org/gnome/desktop/backound/picture-uri"
         value: "'zoom'"
 
     - name: Copy .bashrc file
-    copy:
-      src: files/bashrc
-      dest: ~/.bashrc
-      owner: $USERNAME
-      group: $USERNAME
+      copy:
+        src: files/bashrc
+        dest: ~/.bashrc
+        owner: $USERNAME
+        group: $USERNAME
 
     - name: Copy .bash_aliases file
-    copy:
-      src: files/.bash_aliases
-      dest: ~/.bash_aliases
-      owner: $USERNAME
-      group: $USERNAME
+      copy:
+        src: files/.bash_aliases
+        dest: ~/.bash_aliases
+        owner: $USERNAME
+        group: $USERNAME
 
     - name: Copy bin scripts
-    copy:
-      src: files/bin/{{ item }}
-      dest: ~/bin
-      owner: $USERNAME
-      group: $USERNAME
-      mode: u+rwx, g-rwx, o-rx
+      copy:
+        src: files/bin/{{ item }}
+        dest: ~/bin
+        owner: $USERNAME
+        group: $USERNAME
+        mode: u+rwx, g-rwx, o-rx
